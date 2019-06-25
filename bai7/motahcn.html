@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <canvas id="myCanvas" width="900px" height="500px" style="border:1px solid #d3d3d3;">
+     <script>
+        function Rectangle(chieudai,chieurong) {
+         this.chieudai = chieudai;
+         this.chieurong =chieurong;
+         this.getChieudai = function() {
+         return chieudai;
+         }
+         this.getChieurong = function() {
+             return chieurong;
+         }
+         this.getDientich = function(){
+             return chieudai*chieurong;
+         }
+         this.getChuvi = function() {
+             return (chieudai + chieurong) *2;
+         }
+         }
+         let rectangle = new Rectangle(6,4);
+         let chieudai = rectangle.getChieudai();
+         let chieurong = rectangle.getChieurong();
+         let chuvi = rectangle.getChuvi();
+         let dientich = rectangle.getDientich();
+         alert("dien tich la" + dientich + "chu vi la" + chuvi);
+         var ctx = document.getElementById("myCanvas").getContext("2d");
+         ctx.fillStyle = "#F7FE2E"
+         ctx.fillRect(6,4,length,width);
+
+
+     </script>
+
+    
+    
+</body>
+</html>
