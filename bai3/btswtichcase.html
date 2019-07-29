@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <legend>Nhập số tháng</legend>
+        <input id="thang" type="text">
+        <input type="button" onclick="tinhSoNgay()" value="Tính số ngày">
+        <p id="ketQua"></p>
+    </form>
+    <script>
+        function tinhSoNgay(){
+            var thang = +document.getElementById("thang").value;
+            var kq="";
+            switch(thang) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                kq="thang co 31 ngay";
+                     document.getElementById("ketQua").innerHTML=kq;
+                    break;
+                case 4: 
+                case 6: 
+                case 9: 
+                case 11: 
+                     kq="có 30 ngày";
+                     document.getElementById("ketQua").innerHTML=kq;
+                    break;
+                case 2:
+                     kq="có 28 hoặc 29 ngày";
+                     document.getElementById("ketQua").innerHTML=kq;
+                     break;
+                     default:
+                     break;
+                }   
+        }
+    </script>
+</body>
+</html>

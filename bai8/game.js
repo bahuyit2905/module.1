@@ -1,9 +1,10 @@
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
 
+
 var ball = {
-    x : 20,
-    y : 20,
+    x : 200,
+    y : 200,  
     dx : 5,
     dy : 2,
     radius : 10,
@@ -71,7 +72,7 @@ document.addEventListener('keydown' , function (event) {
     }
 } ) ;
 
-function drawBall() {
+function drawBall() {    
 context.beginPath();
 context.arc( ball.x , ball.y , ball.radius , 0 , Math.PI*2);
 context.fillStyle = "red" ;
@@ -87,11 +88,6 @@ function drawPaddle() {
 
 }
 
-// 2 * OFFSET + 5 * WIDTH + 4 * MARGIN = 500
-  // OFFSET = MARGIN = 25
-// => WIDTH: 70
-// ROW = 3
-// COL = 5
 
 function drawBricks() {
     BrickList.forEach(function (b) {
