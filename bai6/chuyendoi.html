@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>chuyển đổi</h2>
+    <input type="text" id="nhap">
+    <input type="button" id="button" value="Meter" onclick="feetToMeet()">
+    <input type="button" id="button" value="Feet" onclick="meetToFeet()">
+    <div id=meet></div>
+    <div id=feets></div>
+    <script>
+        function feetToMeet(){
+            feet = parseFloat("nhap");
+            feet=document.getElementById('nhap').value;
+            kq=0.305 * feet;
+            document.getElementById("meet").innerHTML=kq;
+        }
+        function meetToFeet(){
+            meet=parseFloat("nhap");
+            meet=document.getElementById("nhap").value;
+            kq=3.279 * meet;
+            document.getElementById("feets").innerHTML=kq;
+        }
+    </script>
+</body>
+</html>
