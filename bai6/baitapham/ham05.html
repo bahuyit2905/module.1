@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let star = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe"];
+    let newStar= ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+     function allStar(str){
+         let index;
+         let flag=false;
+         for(let i=0;i<star.length;i++){
+             if(str==star[i]){
+                 flag=true;
+                 console.log(newStar[i]);
+             }
+            } 
+            if(flag=false){
+                alert("không tìm thấy sao");
+            }
+     }
+     allStar("Polaris");
+    </script>
+</body>
+</html>
