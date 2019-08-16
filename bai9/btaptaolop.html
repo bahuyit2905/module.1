@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>LỚP CodeGym</h3>
+    <input id="class" type="text">
+    <input type="button" value="Nhập lớp" onclick="checkClass()">
+    <script>
+        function checkClass(str){
+            str=document.getElementById("class").value;
+            RegExp=/^[CAP][0-9]{4}[GHIKLM]$/;
+            if(RegExp.test(str)) {
+                alert("nhập đúng ");
+            } else {
+                alert("Nhập sai ");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+    <legend>Công tắc bóng đenf</legend>
+    <input type="button" onclick="interact()" value="OFF" class="btn btn btn-success" id="button">
+    </fieldset>
+    <script>
+        class Lam{
+            constructor(status){
+                this.status=false;
+            }
+        }
+        class SwtichButton {
+            constructor(status,lamp){
+                this.status=false;
+                this.lamp=lamp;
+            }
+          SwtichOnOff(lamp){
+              if(this.status===true){
+                  lamp.status=true;
+
+            }
+                if(this.status===false){
+                    lamp.status=false;
+                }
+          }
+        }
+        var lamp= new Lam();
+        var swtichbutton=new SwtichButton();
+        var button=document.getElementById("button");
+        var on=document.getElementById("on");
+
+        function interact(){
+            if(SwtichButton.status===false){
+                SwtichButton.status==true;
+                console.log("Đèn đã bật");
+                button.value="Open";
+                SwtichButton=swtichbutton;
+                let lamHtml=document.getElementById("Off");
+
+
+            }else{
+                SwtichButton.status===false;
+                console.log("Đèn đã tắt");
+                button.value="Off";
+                SwtichButton=swtichbutton;
+                let lamHtml=document.getElementById("button");
+         }
+        }
+    </script>
+</body>
+</html>
