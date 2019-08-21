@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[5,4,12,6,8,9];
+            var temp;
+            var first=0;
+            var last=arr.length-1;
+            while(first<last){
+                temp=arr[first];
+                arr[first]=arr[last];
+                temp=arr[last];
+                first++;
+                last--;
+            }
+            alert(arr);
+    </script>
+</body>
+</html>
