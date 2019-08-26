@@ -8,6 +8,7 @@ var ball = {
     dx : 5,
     dy : 2,
     radius : 10,
+    
 };
 
  var paddle = {
@@ -16,6 +17,7 @@ var ball = {
     x: 0,
     y: canvas.height - 10,
     speed: 10,
+    
 
     isMovingLeft : false,
     isMovingRight : false,
@@ -74,17 +76,19 @@ document.addEventListener('keydown' , function (event) {
 
 function drawBall() {    
 context.beginPath();
-context.arc( ball.x , ball.y , ball.radius , 0 , Math.PI*2);
+context.arc( ball.x , ball.y , ball.radius , 0 , Math.PI*2,);
 context.fillStyle = "red" ;
 context.fill();
 context.closePath();
 }
 
 function drawPaddle() {
+    
     context.beginPath();
     context.rect(paddle.x , paddle.y , paddle.width , paddle.height);
     context.fill();
     context.closePath();
+
 
 }
 
@@ -158,6 +162,17 @@ function updatePaddlePositon() {
     }
 
 }
+// xây dựng lớp màu ngẫu nhiên
+    function getRandomHex() {
+        return Math.floor(Math.random()*255);
+    }
+    function getRandomColor(){
+        var red = getRandomHex();
+        var green = getRandomHex();
+        var blue = getRandomHex();
+            return "rgb(" + red + "," + blue + "," + green +")";
+    }
+
 
     function checkGameOver() {
         if (ball.y > canvas.height - ball.radius) {

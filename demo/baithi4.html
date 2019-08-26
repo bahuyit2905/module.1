@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <img id='myImage' src="abc.jpg" style="position:absolute;left:100;top:200" width="200" height="100">
+    <canvas id="myCanvas" width="600" height="600"></canvas>
+    <script>
+        class Animal {
+            constructor(x, y, name,width,height,image) {
+                this.x = x;
+                this.y = y;
+                this.name=name;
+                this.width=width;
+                this.height=height;
+                this.image=image;
+                this.color = '#FF3300';
+                
+            }
+
+            render() {
+                let ctx = document.getElementById("myCanvas").getContext("2d");
+              ctx.drawImage(img,200,100);
+            }
+        }
+        var img=document.getElementById("myImage");
+        var animal = new Animal(50,50,"google",200,100,img);
+        animal.render();
+           
+    </script>
+</body>
+
+</html>

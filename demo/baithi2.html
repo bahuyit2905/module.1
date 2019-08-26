@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 4, 5, 23, 6];
+        let index = +prompt('Nhập vị trí cần chèn:?');
+        let input = +prompt('Nhập giá trị cần thêm:?');
+        let checkIndex = Number.isInteger(index);
+        let checkInput = Number.isInteger(index);
+        if (checkIndex === true && checkInput === true) {
+            tryADDFromArray(arr, input, index);
+            disPlay(arr);
+        }else{
+            alert('Giá trị đầu vòng bị sai?:?');
+            disPlay(arr);
+        }
+        function disPlay(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                console.log("Arr[" + i + "]: " + arr[i]);
+            }
+        }
+        function tryADDFromArray(a, n, index) {
+            for (i = 0; i < a.length; i++) {
+                if (index >= 0 && index < a.length) {
+                    a.splice(index, 0, n);
+                    return arr;
+                } else if (index >= a.length) {
+                    return arr;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
